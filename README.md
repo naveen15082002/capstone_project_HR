@@ -16,7 +16,7 @@ To set up the project environment, follow these steps:
 
 **2.Download the folder**
    
-    Save it in another folder
+   Save it in another folder
     
 **3.Create the virtual environment**
 

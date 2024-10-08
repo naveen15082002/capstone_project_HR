@@ -1,0 +1,20 @@
+{% extends 'base_layout.html' %}
+{% block content %}
+<div class="form-container">
+    <p style="color: red;font-weight: bold;font-size: larger;">Please login to continue..</p>
+    {% if messages %}
+            <div class="messages">
+                {% for message in messages %}
+                    <div class="error">{{ message }}</div>
+                {% endfor %}
+            </div>
+    {% endif %}
+    <h2 class="form-title">Login</h2>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button class="submit" type="submit">Login</button>
+    </form>
+    <p style="color: blue;">Don't have an account? <a href="{% url 'signup' %}">Create Account</a></p>
+</div>      
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'predictapp/base.html' %}
+
+{% block title %}Prediction Result{% endblock %}
+
+{% block content %}
+<div class="result">
+    <h2>Prediction Result</h2>
+    <p>Your prediction is: <strong>{{ prediction }}</strong></p>
+    {% if prediction == 0 %}
+        <p>The applicant may agree to the offer letter</p>
+    {% else %}
+        <p>The applicant may refuse the offer letter</strong>.</p>
+    {% endif %}
+    <a href="" class="btn">Make another prediction</a><br>
+    <a href="/" class="btn">Back to home</a>
+</div>
+{% endblock %}

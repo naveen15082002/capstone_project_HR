@@ -1,0 +1,34 @@
+{% extends 'base_layout.html' %}
+{% block content %}
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'login' %}">Prediction</a></li>
+                <li><a href="{% url 'analysis' %}">Analysis</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="content-container">
+            <h1>HR Prediction App</h1>
+            <p>The HR Prediction App leverages advanced analytics to forecast applicate joining status.</p>
+            <h2>Features</h2>
+            <ul>
+                <li><strong>Candidate Joining Prediction:</strong> Offer letter acceptance based on historical data.</li>
+                <li><strong>Custom Reports:</strong> Generate tailored reports for your HR needs.</li>
+            </ul>
+            <h2>How It Works</h2>
+            <p>Our application uses machine learning algorithms to analyze various metrics and provide insights that help HR departments make informed decisions.</p>
+            <h2>Get Started</h2>
+            <p>To begin using the HR Prediction App, navigate to the Prediction or Analysis sections.</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 HR Prediction App. All rights reserved.</p>
+    </footer>
+</body>
+{% endblock %}

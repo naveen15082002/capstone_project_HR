@@ -1,0 +1,112 @@
+{% extends 'predictapp/base.html' %}
+
+{% block title %}Prediction form{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h2>Enter Candidate Details</h2>
+    <form  method="POST">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="DOJ">DOJ Extended:</label>
+           <label>
+                <input type="radio" id="DOJ" name="DOJ" value="yes" required>
+                Yes
+            </label> 
+            <label>
+                <input type="radio" id="DOJ" name="DOJ" value="no">
+                No
+            </label>
+        </div>
+        <div class="form-group">
+            <label for="duration">Duration to accept offer:</label>
+            <input type="number" id="duration" name="duration" required>
+        </div>
+        <div class="form-group">
+            <label for="notice">Notice Period:</label>
+            <input type="number" id="notice" name="notice" required>
+        </div>
+        <div class="form-group">
+            <label for="OB">Offered band:</label>
+            <label>
+                <input type="radio" id="OB" name="OB" value="E0" required>
+                E0
+            </label> 
+            <label>
+                <input type="radio" id="OB" name="OB" value="E1">
+                E1
+            </label>
+            <label>
+                <input type="radio" id="OB" name="OB" value="E2">
+                E2
+            </label> 
+            <label>
+                <input type="radio" id="OB" name="OB" value="E3">
+                E3
+            </label>
+        </div>
+        <div class="form-group">
+            <label for="CTC">Percent difference CTC:</label>
+            <input type="text" id="CTC" name="CTC" required>
+        </div>
+        <div class="form-group">
+            <label for="JB">Joining Bonus:</label>
+            <label>
+                <input type="radio" id="JB" name="JB" value="yes" required>
+                Yes
+            </label> 
+            <label>
+                <input type="radio" id="JB" name="JB" value="no">
+                No
+            </label>
+        </div>
+        <div class="form-group">
+            <label for="CRA">Candidate relocate actual:</label>
+            <label>
+                <input type="radio" id="CRA" name="CRA" value="yes" required>
+                Yes
+            </label> 
+            <label>
+                <input type="radio" id="CRA" name="CRA" value="no">
+                No
+            </label>
+        </div>
+        <div class="form-group">
+            <label for="CS">Candidate Source:</label>
+            <label>
+                <input type="radio" id="CS" name="CS" value="A" required>
+                Agency
+            </label> 
+            <label>
+                <input type="radio" id="CS" name="CS" value="D">
+                Direct
+            </label>
+            <label>
+                <input type="radio" id="CS" name="CS" value="E">
+                Employee Referral
+            </label>
+        </div>
+        <div class="form-group">
+            <label for="exp">Experience in Years:</label>
+            <input type="number" id="exp" name="exp" required>
+        </div>
+        <div class="form-group">
+            <label for="LOB">Line of Business:</label>
+            <label><span style="color:crimson;">Enter the number according to LOB:</span><br><br>
+                0 - AXON<br>
+                1 - BFSI<br>
+                2 - CSMP<br> 
+                3 - EAS <br>
+                4 - ERS<br>
+                5 - ETS<br>
+                6 - Healthcare<br>
+                7 - INFRA<br>
+                8 - MMS<br>
+            </label>
+            <input type="number" id="LOB" name="LOB" required>
+        </div>
+        <button type="submit">Predict</button>
+    </form>
+</div>
+
+{% endblock %}

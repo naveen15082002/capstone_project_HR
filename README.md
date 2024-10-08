@@ -21,6 +21,7 @@ To set up the project environment, follow these steps:
 **3.Create the virtual environment**
 
    python -m venv venv
+   
    venv\Scripts\activate
    
 **4.Install required packages**

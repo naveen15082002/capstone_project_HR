@@ -19,15 +19,19 @@ To set up the project environment, follow these steps:
    cd yourproject
 
 2. **Create the environment variable**
+
+   '''terminal
    python -m venv venv
    venv\Scripts\activate
    
 4. **Install required packages**
+   '''terminal
    pip install django
    pip install numpy
    pip install pandas
    pip install scikit-learn
 
-5. **Run the project**
+6. **Run the project**
+   '''terminal
    python manage.py runserver
      
